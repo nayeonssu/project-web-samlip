@@ -1,0 +1,14 @@
+#wrap {}
+#wrap header {}
+#wrap header h1 {}
+#wrap header h1 a {}
+#wrap header h1 a img {}
+#wrap header nav {}
+#wrap header nav .gnb {}
+#wrap header nav .gnb li {}
+#wrap header nav .gnb li a {}
+#wrap header ul {}
+#wrap header ul li {}
+#wrap header ul li a {}
+#wrap header ul li .lang {}
+#wrap header ul li .search {}
