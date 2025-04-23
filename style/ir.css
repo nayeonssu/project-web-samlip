@@ -1,0 +1,39 @@
+/* ir.css */
+#wrap main .path {
+    padding: 12px 60px 12px 0;
+    border:1px solid #f1f1f1;
+    border-left: 0; border-right: 0;
+    background-color: #fcfcfc;
+    text-align: right;
+}
+#wrap main .path * {
+    font-size: 0.75rem;
+    letter-spacing:0;
+}
+#wrap main .path a {}
+#wrap main .path img {margin:0 8px;}
+#wrap main .path em {}
+#wrap main > * {text-align: center;}
+#wrap main h1 {
+    margin: 80px 0 20px;
+    font-size: 3.75rem;
+    font-weight: 700;
+}
+#wrap main > p {
+    padding:0 0 80px;
+    line-height: 1.5;
+    font-size: 1.125rem;
+}
+#wrap main .bg {
+    background-color:#fcfcfc;
+    padding: 80px 0;
+}
+/* 레이아웃 위치/정렬 기법 종류 inline-block, float, fles, grid, position */
+#wrap main .bg .ir_list {
+    overflow: hidden;
+}
+#wrap main .bg .ir_list a {
+    float: left;
+}
+#wrap main .bg .ir_list a h2 {}
+#wrap main .bg .ir_list a p {}
