@@ -30,10 +30,39 @@
 }
 /* 레이아웃 위치/정렬 기법 종류 inline-block, float, fles, grid, position */
 #wrap main .bg .ir_list {
-    overflow: hidden;
+    /* overflow: hidden;/* 부모영역 밖으로 나간것도 없애라 */
+    width:1280px;
+    height:250px;
+    margin:0 auto;
+    padding:0 80px;
 }
 #wrap main .bg .ir_list a {
-    float: left;
+    float: left;/* 정렬방향 */
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    width:260px; height:250px;
+    margin-right:26.67px;
+    text-align:left;
+    padding:30px;
+    background-repeat: no-repeat;
+    background-position: 90% 90%;
 }
-#wrap main .bg .ir_list a h2 {}
-#wrap main .bg .ir_list a p {}
+#wrap main .bg .ir_list a:hover {
+    background-color: #fff;
+    border: 1px solid #138fbf;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}/* a에 마우스를 눌렸을때 디자인 -> :hover */
+#wrap main .bg .ir_list a:nth-child(1) {background-image:url(../image/ir/ir_01.png)}
+#wrap main .bg .ir_list a:nth-child(2) {background-image:url(../image/ir/ir_02.png)}
+#wrap main .bg .ir_list a:nth-child(3) {background-image:url(../image/ir/ir_03.png)}
+#wrap main .bg .ir_list a:last-child {margin-right: 0; background-image:url(../image/ir/ir_o4.png)} /* last -> 제일 끝을 가리킨다. */
+#wrap main .bg .ir_list a h2 {
+    margin-bottom: 5px;
+    font-size:1.563rem;
+    font-weight:700;
+    line-height:1.3
+}
+#wrap main .bg .ir_list a p {
+    font-size:0.938rem;
+    line-height:1.4
+}
