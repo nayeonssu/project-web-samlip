@@ -1,13 +1,29 @@
 /* index, 모든 sub페이지에 적용할 공통 header, footer common.css */
 #wrap {}
-#wrap header {}
+#wrap header {
+    background-color: aqua;
+    height:92px;
+    padding:0 60px;
+    /* container(header) item(h1, nav, right_menu) */
+    display:flex;
+    flex-flow:row nowrap;/* 방향과 줄바꿈 */
+    justify-content:space-between;/* 메인축의 정렬방법 */ /* figma의 auto같은 느낌 */
+    align-items:center;/* 교차축이 1줄일때 center */
+}
 #wrap header h1 {}
 #wrap header h1 a {}
 #wrap header h1 a img {}
 #wrap header nav {}
-#wrap header nav .gnb {}
-#wrap header nav .gnb li {}
+#wrap header nav .gnb {
+    /* container(.gnb) item(li) */
+    background-color: lime;
+    display:flex; flex-flow:row nowrap;
+}
+#wrap header nav .gnb li {margin-right:60px;}
+#wrap header nav .gnb li:last-child {margin-right: 0;}/* 마지막 li에게 넣어진margitn-rigt의 값을 없앨때 밑에 수열선택자를 따로 만든다. */
 #wrap header nav .gnb li a {
+    border:1px solid red;
+    height:92px; display:block; line-height:92px;
     font-size: 1.125rem;
     font-weight: 600;
     /* line-height: 1 or 100%; reset초기값에 존재하므로 생략 */
@@ -15,20 +31,58 @@
     /* text-align:left; 기본값이므로 작성 필요 없음 */
     /* color:#000; reset초기값에 존재하므로 생략 */
 }
-#wrap header ul {}
-#wrap header ul li {}
-#wrap header ul li a {
+#wrap header .right_menu {
+    background-color: yellow;
+    display:flex; flex-flow:row nowrap;/* display -> flex선언, 메인축 -> 수평, 자동줄바꿈x */
+}
+#wrap header .right_menu li {margin-left:30px;}
+#wrap header .right_menu li:first-child {
+    margin-left:0;
+    display:flex; flex-flow:row nowrap;
+    align-items:center;
+    line-height:24px;
+}
+/* 포토샵, 피그마에서 디자인한 구분선 디자인은 CSS에서 가상선택자 after 또는 before를 이용하여 면으로 변경하여 디자인한다. */
+#wrap header .right_menu li:first-child::after {
+    content:'';/* 컨텐츠를 비워두는건 아무것도 쓰지 않겠다고 하는것 */
+    display:inline-block; width:1px; height:20px;
+    background-color:#000;
+    margin-left:30px;
+}
+#wrap header .right_menu li:first-child {}
+#wrap header .right_menu li a {
     font-size: 0.75rem;
     letter-spacing: 0;
 }
-#wrap header ul li a img {}
+#wrap header .right_menu li a img {}
 /* ====================================footer */
-#wrap footer {}
-#wrap footer .top {}
-#wrap footer .top .left {}
-#wrap footer .top .left a {
-    font-weight: 600;
+#wrap .footer_full_w {
+    width:100%;
+    padding:50px 60px;/* 메인메뉴의 footer와 서브메뉴의 footer의 크기가 다를때는 footer에 class를 주어서 메인과 서브로 나눠서 크기를 맟춰준다. */
 }
+#wrap footer {
+    background-color: aqua;
+    width:1280px;/* footer의 전체 넓이를 정한다. */
+    margin:0 auto;
+    padding:50px 0;/* 먼저 figma에서 작업한 여백의 크기를 먼저 적용한다. */
+}
+#wrap footer .top {
+    background-color: red;
+    margin-bottom:12px;
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between;
+}
+#wrap footer .top .left {
+    background-color: orange;
+    display:flex; flex-flow:row nowrap; /* flex 필요할때다 같이 써야함(기본값) */
+    align-items:center;/* 수직 중앙정렬 */
+}
+#wrap footer .top .left a {
+    background-color: greenyellow;
+    font-weight: 600;
+    margin-right:60px;
+}
+#wrap footer .top .left a:last-child {margin-right:0;}
 /* ===========================footer 수열선택자 */
 #wrap footer .top .left a:nth-child(1) {
     color: #138FBF;
@@ -38,18 +92,35 @@
 }
 /* ===========================footer */
 #wrap footer .top .left a img {}
-#wrap footer .top .right {}
+#wrap footer .top .right {
+    background-color: pink;
+    display:flex; flex-flow:row nowrap;/* flex는 형제끼리 크기를 맟춰주는 기능이 있다. */
+    align-items:center;
+}
 /* ===========================footer 패밀리사이트+사이트맵 공통 */
 #wrap footer .top .right .site {
     font-size: 0.75;
     padding: 7px 10px;
-    border: 1px solid #eee;
+    border: 1px solid #eee; height:38px;
 }
 /* ===========================footer 패밀리사이트+사이트맵 개별 */
-#wrap footer .top .right select {}
+#wrap footer .top .right select {
+    width:197px; outline:none;
+    background:#fff url(../image/icon_down_arrow.png) no-repeat 95% center;
+}
 #wrap footer .top .right select option {}
-#wrap footer .top .right .site_map {}
-#wrap footer .top .right .site_map span {}
+#wrap footer .top .right .site_map {
+    background:#fff;
+    width:137px;
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between;/* 메인축 양쪽끝 */
+    align-items:center;/* 교차축 수직 정렬 */
+    margin-left:20px;
+}
+#wrap footer .top .right .site_map span {
+    background-color: #DA2128;
+    
+}
 #wrap footer .top .right .site_map img {}
 #wrap footer .btm {}
 #wrap footer .btm * {
