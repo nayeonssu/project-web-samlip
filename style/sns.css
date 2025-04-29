@@ -19,23 +19,32 @@
     font-size:3.438rem;
     font-weight:700;
 }
-#wrap main p {
-    background-color: cadetblue;
-    padding:0 0 70px;
+#wrap main > p {
+    background-color: yellow;
+    padding-bottom:70px;
+    font-size:1.125rem;
 }
-#wrap main .bg {
+#wrap main .sns_wrap {
     background-color: steelblue;
-    padding:70px 0;
-    display: flex; flex-flow:row nowrap;
+    display:flex; flex-flow:row nowrap;
+    justify-content:center;
+    padding:70px;
+}
+#wrap main .sns_wrap a {
+    background-color: brown;
+    width:360px;
+    padding:50px 0;
+    margin-right:30px;
+    display:flex; flex-flow:column nowrap;
     justify-content:center;
 }
-#wrap main .bg li {
-    background-color: chocolate;
-    display:inline-block;
-    width:360px; height:300px;
-    margin-right:30px;
+#wrap main .sns_wrap a p {background-color: violet;}
+#wrap main .sns_wrap a p img {background-color: blue;}
+#wrap main .sns_wrap a h2 {
+    background-color: tomato;
+    font-size:1.875rem;
+    font-weight:600;
+    text-transform: capitalize;
+    margin:25px 0;
 }
-#wrap main .bg li a {}
-#wrap main .bg li a img {}
-#wrap main .bg li a em {}
-#wrap main .bg li a span {}
+#wrap main .sns_wrap a p:last-child {background-color: green;}
