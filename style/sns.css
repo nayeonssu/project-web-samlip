@@ -1,12 +1,11 @@
 /* sns.css */
 #wrap {}
-#wrap main {
-    text-align: center;
-}
+#wrap main {text-align: center;}
 #wrap main .path {
     /* 위치 먼저 설정 후 여백,글꼴디자인 */
+    background-color:#FCFCFC;
     text-align:right;/* 글 정렬 방향 */
-    padding:12px 60px;
+    padding:15px 60px 15px 0;
     border:1px solid #F1F1F1; border-left:0; border-right:0;
     font-size:0.75rem;
 }
@@ -14,37 +13,44 @@
 #wrap main .path img {}
 #wrap main .path em {}
 #wrap main h1 {
-    background-color: limegreen;
-    padding:70px 0 20px;
+    margin:70px 0 20px;
     font-size:3.438rem;
     font-weight:700;
 }
 #wrap main > p {
-    background-color: yellow;
-    padding-bottom:70px;
+    margin-bottom:70px;
     font-size:1.125rem;
 }
-#wrap main .sns_wrap {
-    background-color: steelblue;
+#wrap main .bg {
+    background-color:#FCFCFC;
+    padding:70px 0;
+    border-bottom:1px solid #f1f1f1;
+}
+#wrap main .bg .sns_wrap {
     display:flex; flex-flow:row nowrap;
-    justify-content:center;
-    padding:70px;
+    justify-content:space-between;
+    width:1280px; margin:0 auto;
 }
-#wrap main .sns_wrap a {
-    background-color: brown;
-    width:360px;
-    padding:50px 0;
-    margin-right:30px;
-    display:flex; flex-flow:column nowrap;
+#wrap main .bg .sns_wrap a {
+    width:400px; height:300px;
+    border:1px solid #ddd;
+    background-color:#F5F5F5 ;
+    /* padding-top:80px; */
+    display:flex; flex-flow:column nowrap;/* column 메인축이 수직 */
     justify-content:center;
 }
-#wrap main .sns_wrap a p {background-color: violet;}
-#wrap main .sns_wrap a p img {background-color: blue;}
-#wrap main .sns_wrap a h2 {
-    background-color: tomato;
+#wrap main .bg .sns_wrap a:hover {
+    /* hover -> 디자인 */
+    border:1px solid #4083ff;
+    box-shadow:0 0 25px rgba(0,0,0,0.2);/* 테두리 shadow */
+}
+#wrap main .bg .sns_wrap a:last-child {}
+#wrap main .bg .sns_wrap a p {}
+#wrap main .bg .sns_wrap a p img {}
+#wrap main .bg .sns_wrap a h2 {
+    margin:25px 0;
     font-size:1.875rem;
     font-weight:600;
     text-transform: capitalize;
-    margin:25px 0;
 }
-#wrap main .sns_wrap a p:last-child {background-color: green;}
+#wrap main .bg .sns_wrap a h2+p {}
