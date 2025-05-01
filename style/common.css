@@ -2,7 +2,6 @@
 #wrap {}
 #wrap header {
     position:relative;/* lnb_bg의 부모 위치 기준 설정 */
-    background-color: aqua;
     height:92px;
     padding:0 60px;
     /* container(header) item(h1, nav, right_menu) */
@@ -17,13 +16,11 @@
 #wrap header nav {}
 #wrap header nav .gnb {
     /* container(.gnb) item(li) */
-    background-color: lime;
     display:flex; flex-flow:row nowrap;
 }
 #wrap header nav .gnb > li {margin-right:60px;}
 #wrap header nav .gnb > li:last-child {margin-right: 0;}/* 마지막 li에게 넣어진margitn-rigt의 값을 없앨때 밑에 수열선택자를 따로 만든다. */
 #wrap header nav .gnb > li > a {
-    border:1px solid red;
     height:92px; display:block; line-height:92px;
     font-size: 1.125rem;
     font-weight: 600;
@@ -51,7 +48,6 @@
     z-index:999;
 }
 #wrap header nav .gnb > li .lnb_bg .lnb_depth1 {
-    background-color: yellow;
     width:max-content;/* 내용의 최대 크기에 맞추겠다. | 피그마 Hug */
     margin:0 auto;
     display:flex;/* 정렬하고 싶은 대상(li)의 부모(ul)에게 flex를 선언한다. */
@@ -64,7 +60,6 @@
 #wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li > a {font-size:1.063rem; font-weight:600;}
 #wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 {
     margin-top:14px;
-    border:2px solid red;
 }
 #wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li:last-child {margin-bottom:0;}
 #wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li {margin-bottom:16px;}
@@ -88,11 +83,9 @@
     width:315px;
 }
 #wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li {
-    background-color:#fff;
+    background-color:blue;
 }
-#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li > a {
-    background-color: violet;
-}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li > a {}
 #wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li > a img {}
 /* ===============================gnb 2. brands 서브메뉴개별디자인(이미지효과) */
 #wrap header nav .gnb > li:nth-child(2) .lnb_bg a img {
@@ -105,7 +98,6 @@
 }
 /* ===============================우측 보조메뉴 */
 #wrap header .right_menu {
-    background-color: yellow;
     display:flex; flex-flow:row nowrap;/* display -> flex선언, 메인축 -> 수평, 자동줄바꿈x */
 }
 #wrap header .right_menu li {margin-left:30px;}
@@ -134,24 +126,20 @@
     padding:50px 60px;/* 메인메뉴의 footer와 서브메뉴의 footer의 크기가 다를때는 footer에 class를 주어서 메인과 서브로 나눠서 크기를 맟춰준다. */
 }
 #wrap footer {
-    background-color: aqua;
     width:1280px;/* footer의 전체 넓이를 정한다. */
     margin:0 auto;
     padding:50px 0;/* 먼저 figma에서 작업한 여백의 크기를 먼저 적용한다. */
 }
 #wrap footer .top {
-    background-color: red;
     margin-bottom:12px;
     display:flex; flex-flow:row nowrap;
     justify-content:space-between;
 }
 #wrap footer .top .left {
-    background-color: orange;
     display:flex; flex-flow:row nowrap; /* flex 필요할때다 같이 써야함(기본값) */
     align-items:center;/* 수직 중앙정렬 */
 }
 #wrap footer .top .left a {
-    background-color: greenyellow;
     font-weight: 600;
     margin-right:60px;
 }
@@ -166,7 +154,6 @@
 /* ===========================footer */
 #wrap footer .top .left a img {}
 #wrap footer .top .right {
-    background-color: pink;
     display:flex; flex-flow:row nowrap;/* flex는 형제끼리 크기를 맟춰주는 기능이 있다. */
     align-items:center;
 }
@@ -190,10 +177,7 @@
     align-items:center;/* 교차축 수직 정렬 */
     margin-left:20px;
 }
-#wrap footer .top .right .site_map span {
-    background-color: #DA2128;
-    
-}
+#wrap footer .top .right .site_map span {}
 #wrap footer .top .right .site_map img {}
 #wrap footer .btm {}
 #wrap footer .btm * {
