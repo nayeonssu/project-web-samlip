@@ -33,15 +33,18 @@
     /* color:#000; reset초기값에 존재하므로 생략 */
 }
 /* ===============================서브메뉴 company,ir*/
-#wrap header nav .gnb > li:first-child:hover .lnb_bg {
+#wrap header nav .gnb > li:hover .lnb_bg {
     /* :hover 마우스를 올렸을때만 동작 -> 영역 밖으로 나가면 닫힘 */
     display:block;
 }
-#wrap header nav .gnb > li:nth-child(3):hover .lnb_bg {display:block;}
+/* #wrap header nav .gnb > li:first-child:hover .lnb_bg {display:none;}/* company */
+/* #wrap header nav .gnb > li:nth-child(2):hover .lnb_bg {display:block}/* brands */
+/* #wrap header nav .gnb > li:nth-child(3):hover .lnb_bg {display:none;}/* ir */
 #wrap header nav .gnb > li .lnb_bg {
     background:rgba(255,255,255,0.8);
     position:absolute; left:0; top:92px;/* 시작 위치 설정 */
-    width:100%;/* absolute 대상일 경우 width값은 부모설정된 요소의 상대값(%)으로 설정된다. */
+    width:100%;
+    /* absolute 대상일 경우 width값은 부모설정된 요소의 상대값(%)으로 설정된다. */
     padding:50px 0;
     /* 초기 숨기기(마우스 올릴때만 보이도록) */
     display:none;
@@ -62,11 +65,43 @@
     margin-top:14px;
     border:2px solid red;
 }
-#wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li {margin-bottom:16px;}
 #wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li:last-child {margin-bottom:0;}
+#wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li {margin-bottom:16px;}
 #wrap header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li a {}
-/* ===============================서브메뉴 brands */
-#wrap header nav .gnb > li .lnb_bg .lnb_brands1 {}
+/* ===============================gnb 2. brands 서브메뉴개별디자인 */
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg {}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 {}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li {}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li a {}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li a h2 {
+    font-size:1.063rem; font-weight:600;
+}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li a p {margin-top:14px;}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li a p img {}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li a:first-child p img {background-color:#fff;}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li > h2 {font-size:1.063rem; font-weight:600;}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 {
+    display:flex;
+    flex-flow:row wrap;/* 자동정렬 */
+    justify-content:space-between;
+    width:315px;
+}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li {
+    background-color:#fff;
+}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li > a {
+    background-color: violet;
+}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li > a img {}
+/* ===============================gnb 2. brands 서브메뉴개별디자인(이미지효과) */
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg a img {
+    filter:grayscale(100%); opacity:(80%);
+    border:1px solid #fff;
+}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg a:hover img {
+    filter:grayscale(0);
+    border:1px solid #000;
+}
 /* ===============================우측 보조메뉴 */
 #wrap header .right_menu {
     background-color: yellow;
