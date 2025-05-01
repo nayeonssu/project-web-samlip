@@ -48,6 +48,7 @@
     padding:50px 0;
     /* 초기 숨기기(마우스 올릴때만 보이도록) */
     display:none;
+    z-index:999;
 }
 #wrap header nav .gnb > li .lnb_bg .lnb_depth1 {
     background-color: yellow;
