@@ -79,13 +79,17 @@
 #wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li a:first-child p img {background-color:#fff;}
 #wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li > h2 {font-size:1.063rem; font-weight:600;}
 #wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 {
-    background-color: pink;
     display:flex;
     flex-flow:row wrap;/* 자동정렬 */
     justify-content:space-between;
     width:315px;
 }
-#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li {background-color:chartreuse;}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li {
+}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li:last-child {
+    margin:0;
+}
+#wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li:nth-last-child(2) {margin:0;}
 #wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li > a {}
 #wrap header nav .gnb > li:nth-child(2) .lnb_bg .lnb_depth1 > li .lnb_depth2 > li > a img {}
 /* ===============================gnb 2. brands 서브메뉴개별디자인(이미지효과) */

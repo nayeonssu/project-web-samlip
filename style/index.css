@@ -154,7 +154,6 @@ body, html {scroll-behavior:smooth;}
 }
 /* ==============================삼립스튜디오 - 유튜브 채널 미리보기 */
 #wrap main .studio_wrap .studio_list {
-    background-color: violet;
     width:1370px; margin:80px auto;
     display:flex; flex-flow:row wrap;
     justify-content:space-between;/* 양쪽끝으로 정렬 */
@@ -181,7 +180,6 @@ body, html {scroll-behavior:smooth;}
 }
 #wrap main .studio_wrap .studio_open .open_container .close {
     color:#fff;
-    background-color: aquamarine;
     width:900px; text-align:right; margin:10px;
 }
 #wrap main .studio_wrap .studio_open .open_container .youtube {}
@@ -235,12 +233,12 @@ body, html {scroll-behavior:smooth;}
 #wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li {
     background-color: #fff;
     border:1px solid #ddd;
-    width:200px; height:120px;
+    width:200px; height:140px;
     position:relative;/* 부모기준 */
     margin-bottom:50px;
 }
 #wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li:nth-child(6) ~ li {margin-bottom:0;}
-#wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li:hover .logo_details {display:block;}/* 가려놓은 display:none; 을 보이게 할때 */
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li:hover .logo_details {display:flex;}/* 가려놓은 display:none; 을 보이게 할때 */
 #wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li .logo {}
 #wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li .logo img {}
 #wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li .logo_details {
@@ -248,13 +246,15 @@ body, html {scroll-behavior:smooth;}
     position:absolute;/* 겹치는 대상 */
     left:0; top:0;/* absolute 작성 시 좌표 필수! */
     width:100%; height:100%;/* absolute의 부모대상과 동일한 크기 설정 */
+    display:flex; flex-flow:column nowrap;
+    justify-content:center; align-items:center;
     display:none;/* 초기 숨기기 */
     padding:5px 5px;
 }
 #wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li .logo_details * {color:#fff;}/* * 모두 선택하겠다. */
-#wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li .logo_details h3 {font-weight:600; margin-bottom:4px;}
-#wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li .logo_details p {font-size:0.875rem; line-height:1.4;}
-#wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li .logo_details .view {font-size:0.75rem; border:1px solid #fff; padding:2px 4px;}
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li .logo_details h3 {font-size:0.875rem; font-weight:600;}
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li .logo_details p {font-size:0.75rem; line-height:1.4; margin:5px 0;}
+#wrap main .brands_all .brands_wrap .brands_container ul[class*=slide]  li .logo_details .view {font-size:0.75rem; border:1px solid #fff; padding:8px 10px;}
 /* ==============================2. 삼립 브랜드 (슬라이드 버튼) */
 #wrap main .brands_all .brands_wrap .brands_btn {}
 #wrap main .brands_all .brands_wrap .brands_btn #brands_prev {margin-right:10px;}
